@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-K7URE6B4.js"></script>
-    <script src="dist/sidebar_items-6021E7FB.js"></script>
+    <script src="dist/sidebar_items-C3AB4E68.js"></script>
     <script src="docs_config.js"></script>
     <script async src="dist/html-PVRIOB7F.js"></script>
 
@@ -254,6 +254,8 @@ This module will potentially augment db operations with transaction wrappers.</p
     <a href="Plausible.Auth.ApiKey.html" translate="no">Plausible.Auth.ApiKey</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>There are two kinds of API keys, legacy API keys and team-scoped API keys.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1046,6 +1048,16 @@ this allows for mocking DNS lookups in tests.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Event.SystemEvents.html" translate="no">Plausible.Event.SystemEvents</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>System events are events that require at least one form of special treatment by the application.
+They are distinguished by event name.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Exports.html" translate="no">Plausible.Exports</a>
 
   </div>
@@ -1139,15 +1151,6 @@ creating and deleting funnel definitions.</p></div>
     <a href="Plausible.Goals.html" translate="no">Plausible.Goals</a>
 
   </div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.Goals.SystemGoals.html" translate="no">Plausible.Goals.SystemGoals</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>This module contains logic for special goals</p></div>
 
 </div>
 <div class="summary-row">
@@ -1469,7 +1472,7 @@ are uniformly either buffered in batches (to Clickhouse) or dropped
 
   </div>
 
-    <div class="summary-synopsis"><p>Sets up telemetry for remote calls to persistor via <a href="https://hexdocs.pm/finch/0.19.0/Finch.Telemetry.html"><code class="inline">Finch.Telemetry</code></a> events.</p></div>
+    <div class="summary-synopsis"><p>Sets up telemetry for remote calls to persistor via <a href="https://hexdocs.pm/finch/0.20.0/Finch.Telemetry.html"><code class="inline">Finch.Telemetry</code></a> events.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1541,94 +1544,12 @@ correctly.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.CSP.html" translate="no">Plausible.InstallationSupport.Checks.CSP</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Scans the Content Security Policy header to ensure that the Plausible domain is allowed.
-See <a href="Plausible.InstallationSupport.LegacyVerification.Checks.html"><code class="inline">Plausible.InstallationSupport.LegacyVerification.Checks</code></a> for the execution sequence.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="Plausible.InstallationSupport.Checks.Detection.html" translate="no">Plausible.InstallationSupport.Checks.Detection</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Calls the browserless.io service (local instance can be spawned with <code class="inline">make browserless</code>)
 and runs detector script via the <a href="https://docs.browserless.io/HTTP-APIs/function">function API</a>.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.FetchBody.html" translate="no">Plausible.InstallationSupport.Checks.FetchBody</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Fetches the body of the site and extracts the HTML document, if available, for
-further processing. See <a href="Plausible.InstallationSupport.LegacyVerification.Checks.html"><code class="inline">Plausible.InstallationSupport.LegacyVerification.Checks</code></a>
-for the execution sequence.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.Installation.html" translate="no">Plausible.InstallationSupport.Checks.Installation</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Calls the browserless.io service (local instance can be spawned with <code class="inline">make browserless</code>)
-and runs verifier script via the <a href="https://docs.browserless.io/HTTP-APIs/function">function API</a>.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.InstallationV2.html" translate="no">Plausible.InstallationSupport.Checks.InstallationV2</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Calls the browserless.io service (local instance can be spawned with <code class="inline">make browserless</code>)
-and runs verifier script via the <a href="https://docs.browserless.io/HTTP-APIs/function">function API</a>.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.InstallationV2CacheBust.html" translate="no">Plausible.InstallationSupport.Checks.InstallationV2CacheBust</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>If the output of previous checks can not be interpreted as successful,
-as a last resort, we try to bust the cache of the site under test by adding a query parameter to the URL,
-and running InstallationV2 again.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.ScanBody.html" translate="no">Plausible.InstallationSupport.Checks.ScanBody</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Naive way of detecting GTM and WordPress powered sites.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.Snippet.html" translate="no">Plausible.InstallationSupport.Checks.Snippet</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>The check looks for Plausible snippets and tries to address the common
-integration issues, such as bad placement, data-domain typos, unknown
-attributes frequently added by performance optimization plugins, etc.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.Checks.SnippetCacheBust.html" translate="no">Plausible.InstallationSupport.Checks.SnippetCacheBust</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>A naive way of trying to figure out whether the latest site contents
-is wrapped with some CDN/caching layer.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1641,6 +1562,27 @@ is wrapped with some CDN/caching layer.</p></div>
 If not, checks if prepending <code class="inline">www.</code> helps,
 because we have specifically requested customers to register the domain with <code class="inline">www.</code> prefix.
 If not, skips all further checks.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.InstallationSupport.Checks.VerifyInstallation.html" translate="no">Plausible.InstallationSupport.Checks.VerifyInstallation</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Calls the browserless.io service (local instance can be spawned with <code class="inline">make browserless</code>)
+and runs verifier script via the <a href="https://docs.browserless.io/HTTP-APIs/function">function API</a>.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.InstallationSupport.Checks.VerifyInstallationCacheBust.html" translate="no">Plausible.InstallationSupport.Checks.VerifyInstallationCacheBust</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>If the output of previous checks can not be interpreted as successful,
+as a last resort, we try to bust the cache of the site under test by adding a query parameter to the URL,
+and running VerifyInstallation again.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1660,33 +1602,6 @@ methods and whether v1 is used on the site.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Module responsible for translating diagnostics to user-friendly errors and recommendations.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.LegacyVerification.Checks.html" translate="no">Plausible.InstallationSupport.LegacyVerification.Checks</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Checks that are performed during v1 site verification.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.LegacyVerification.Diagnostics.html" translate="no">Plausible.InstallationSupport.LegacyVerification.Diagnostics</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Module responsible for translating diagnostics to user-friendly errors and recommendations.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.InstallationSupport.LegacyVerification.Errors.html" translate="no">Plausible.InstallationSupport.LegacyVerification.Errors</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>A go-to definition of all legacy verification errors</p></div>
 
 </div>
 <div class="summary-row">
@@ -1773,13 +1688,11 @@ methods and whether v1 is used on the site.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.OpenTelemetry.Sampler.html" translate="no">Plausible.OpenTelemetry.Sampler</a>
+    <a href="Plausible.OpenTelemetry.Logger.html" translate="no">Plausible.OpenTelemetry.Logger</a>
 
   </div>
 
-    <div class="summary-synopsis"><p><a href="https://hexdocs.pm/opentelemetry/readme.html#samplers">Custom OpenTelemetry sampler</a>
-implementation that ignores particular traces to reduce noise. Ingestion
-HTTP requests and queries to Oban tables are ignored, for example.</p></div>
+    <div class="summary-synopsis"><p>Telemetry handler that adds the OpenTelemetry trace_id to Logger metadata.</p></div>
 
 </div>
 <div class="summary-row">
@@ -2239,11 +2152,31 @@ with one of the following policy markers</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Site.TrackerScriptCache.html" translate="no">Plausible.Site.TrackerScriptCache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Caches the full tracker script.
+Must be refreshed whenever the TrackerScriptConfiguration associated with the script changes.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Site.TrackerScriptConfiguration.html" translate="no">Plausible.Site.TrackerScriptConfiguration</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Schema for tracker script configuration</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Site.TrackerScriptIdCache.html" translate="no">Plausible.Site.TrackerScriptIdCache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Cache for tracker script IDs to avoid excessive database lookups when the
+script API endpoint is bombarded with random IDs.</p></div>
 
 </div>
 <div class="summary-row">
@@ -2337,6 +2270,13 @@ with one of the following policy markers</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Stats.ConsolidatedView.html" translate="no">Plausible.Stats.ConsolidatedView</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Stats.CurrentVisitors.html" translate="no">Plausible.Stats.CurrentVisitors</a>
 
   </div>
@@ -2349,6 +2289,17 @@ with one of the following policy markers</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Module for querying user defined 'custom properties'.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Stats.Dashboard.QueryParser.html" translate="no">Plausible.Stats.Dashboard.QueryParser</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Parses a dashboard query string into <code class="inline">%ParsedQueryParams{}</code>. Note that
+<code class="inline">metrics</code> and <code class="inline">dimensions</code> do not exist at this step yet, and are expected
+to be filled in by each specific report.</p></div>
 
 </div>
 <div class="summary-row">
@@ -2374,6 +2325,15 @@ with one of the following policy markers</p></div>
   </div>
 
     <div class="summary-synopsis"><p>A module for parsing filters used in stat queries.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Stats.Filters.LegacyStatsAPIFilterParser.html" translate="no">Plausible.Stats.Filters.LegacyStatsAPIFilterParser</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Parser for legacy filter format used in Stats API v1.</p></div>
 
 </div>
 <div class="summary-row">
@@ -2472,7 +2432,7 @@ for dimensions, filters and metrics used in import table queries</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>Deprecated module. See QueryParser for list of valid dimensions</p></div>
+    <div class="summary-synopsis"><p>Deprecated module. See ApiQueryParser for list of valid dimensions</p></div>
 
 </div>
 <div class="summary-row">
@@ -2518,6 +2478,15 @@ are used when site does not have engagement data for the requested dates.</p></d
   </div>
 
     <div class="summary-synopsis"><p>Module used in tests to 'set' the current time.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Stats.QueryBuilder.html" translate="no">Plausible.Stats.QueryBuilder</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A module used for building the Query struct from already parsed params.</p></div>
 
 </div>
 <div class="summary-row">
@@ -2602,7 +2571,7 @@ for dimensions and metrics used in query SELECT statement.</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>Cache storing estimation for events ingested by a team in the past month.</p></div>
+    <div class="summary-synopsis"><p>Cache storing estimation for events ingested by a site in the past month.</p></div>
 
 </div>
 <div class="summary-row">
@@ -2813,6 +2782,15 @@ transitions, including persistence options.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Teams.Memberships.UserPreference.html" translate="no">Plausible.Teams.Memberships.UserPreference</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Team-specific user preferences schema</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Teams.Policy.html" translate="no">Plausible.Teams.Policy</a>
 
   </div>
@@ -2883,6 +2861,16 @@ transitions, including persistence options.</p></div>
     <div class="summary-synopsis"><p>Currently only supports post request, it's a drop-in replacement
 for our exvcr usage that wasn't ever needed (e.g. we had no way to
 re-record the cassettes anyway).</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Test.Support.Sandbox.html" translate="no">Plausible.Test.Support.Sandbox</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Prevent background processes from interfering with tests 
+(e.g. exiting before properly returning the connection) by allowing them to access sandbox</p></div>
 
 </div>
 <div class="summary-row">
@@ -3276,12 +3264,12 @@ flow definitions.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.Components.Site.Feature.html" translate="no">PlausibleWeb.Components.Site.Feature</a>
+    <a href="PlausibleWeb.Components.Site.Feature.ToggleLive.html" translate="no">PlausibleWeb.Components.Site.Feature.ToggleLive</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Phoenix Component for rendering a user-facing feature toggle
-capable of flipping booleans in <a href="Plausible.Site.html"><code class="inline">Plausible.Site</code></a> via the <code class="inline">toggle_feature</code> controller action.</p></div>
+    <div class="summary-synopsis"><p>LiveComponent for rendering a user-facing feature toggle in LiveView contexts.
+Instead of using form submission, this component messages itself to handle toggles.</p></div>
 
 </div>
 <div class="summary-row">
@@ -3665,16 +3653,16 @@ data contains a valid token.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.Live.ChangeDomainV2.html" translate="no">PlausibleWeb.Live.ChangeDomainV2</a>
+    <a href="PlausibleWeb.Live.ChangeDomain.html" translate="no">PlausibleWeb.Live.ChangeDomain</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>LiveView for the change domain v2 flow.</p></div>
+    <div class="summary-synopsis"><p>LiveView for the change domain flow.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.Live.ChangeDomainV2.Form.html" translate="no">PlausibleWeb.Live.ChangeDomainV2.Form</a>
+    <a href="PlausibleWeb.Live.ChangeDomain.Form.html" translate="no">PlausibleWeb.Live.ChangeDomain.Form</a>
 
   </div>
 
@@ -3869,6 +3857,24 @@ and the number of steps they have.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.Live.GoalSettings.PropertyPairInput.html" translate="no">PlausibleWeb.Live.GoalSettings.PropertyPairInput</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveComponent for a property name + value ComboBox pair.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.GoalSettings.PropertyPairs.html" translate="no">PlausibleWeb.Live.GoalSettings.PropertyPairs</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveComponent for managing multiple custom property name + value pairs</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Live.ImportsExportsSettings.html" translate="no">PlausibleWeb.Live.ImportsExportsSettings</a>
 
   </div>
@@ -3887,29 +3893,20 @@ and the number of steps they have.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.Live.InstallationV2.html" translate="no">PlausibleWeb.Live.InstallationV2</a>
+    <a href="PlausibleWeb.Live.Installation.Icons.html" translate="no">PlausibleWeb.Live.Installation.Icons</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>User assistance module around Plausible installation instructions/onboarding</p></div>
+    <div class="summary-synopsis"><p>Icon components for the Installation module</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.Live.InstallationV2.Icons.html" translate="no">PlausibleWeb.Live.InstallationV2.Icons</a>
+    <a href="PlausibleWeb.Live.Installation.Instructions.html" translate="no">PlausibleWeb.Live.Installation.Instructions</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Icon components for InstallationV2 module</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="PlausibleWeb.Live.InstallationV2.Instructions.html" translate="no">PlausibleWeb.Live.InstallationV2.Instructions</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Instruction forms and components for InstallationV2 module</p></div>
+    <div class="summary-synopsis"><p>Instruction forms and components for the Installation module</p></div>
 
 </div>
 <div class="summary-row">
@@ -4002,6 +3999,24 @@ select element replacement, embeddable in dead views.</p></div>
 
     <div class="summary-synopsis"><p>This module tries to supply LiveViews with some common Sentry context
 (without it, there is practically none).</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.SharedLinkSettings.html" translate="no">PlausibleWeb.Live.SharedLinkSettings</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView allowing listing, creating and deleting shared links.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.SharedLinkSettings.Form.html" translate="no">PlausibleWeb.Live.SharedLinkSettings.Form</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Live view for the shared link creation form</p></div>
 
 </div>
 <div class="summary-row">
@@ -4343,6 +4358,15 @@ serves as a comprehensive health check</p></div>
   </div>
 
     <div class="summary-synopsis"><p>OpenAPI schema for Custom Event Goal object</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Schemas.Goal.CustomProps.html" translate="no">PlausibleWeb.Plugins.API.Schemas.Goal.CustomProps</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Reusable OpenAPI schema definitions for Custom Properties in Goals</p></div>
 
 </div>
 <div class="summary-row">
@@ -4820,15 +4844,6 @@ Plugins API Tokens lookup.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Plug to serve the Plausible tracker script.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="PlausibleWeb.TrackerScriptCache.html" translate="no">PlausibleWeb.TrackerScriptCache</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Cache for tracker script.</p></div>
 
 </div>
 <div class="summary-row">
